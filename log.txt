@@ -1,0 +1,32 @@
+/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/boto3/compat.py:88: PythonDeprecationWarning: Boto3 will no longer support Python 3.6 starting May 30, 2022. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.7 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+Traceback (most recent call last):
+  File "/home/techiee/Keka-Automation/keka_login.py", line 8, in <module>
+    from sns import msg
+  File "/home/techiee/Keka-Automation/sns.py", line 14, in <module>
+    client = boto3.client("sns")
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/boto3/__init__.py", line 92, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/boto3/session.py", line 309, in client
+    config=config,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/session.py", line 957, in create_client
+    api_version=api_version,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/client.py", line 132, in create_client
+    endpoint_bridge,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/client.py", line 475, in _get_client_args
+    endpoint_bridge,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/args.py", line 94, in get_client_args
+    scoped_config,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/args.py", line 189, in compute_client_args
+    s3_config=s3_config,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/args.py", line 278, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/args.py", line 382, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/client.py", line 570, in resolve
+    use_fips_endpoint=use_fips_endpoint,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/regions.py", line 210, in construct_endpoint
+    use_fips_endpoint,
+  File "/home/techiee/anaconda3/envs/py36/lib/python3.6/site-packages/botocore/regions.py", line 253, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
